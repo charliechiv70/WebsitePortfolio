@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 20px;
+  background-color: #111;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00bfff;
+}
+
+.hero-section {
+  display: flex;
+  align-items: center;     /* vertical center */
+  justify-content: center; /* horizontal center */
+  gap: 30px;               /* space between text and image */
+  padding: 50px;
+  flex-wrap: nowrap;       /* keep them side by side */
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;          /* center the whole section horizontally */
+}
+
+.hero-text {
+  max-width: 500px;
+  font-size: 1.2rem;
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  color: #00bfff;
+}
+
+.hero-text p {
+  font-size: 1.5rem;
+}
+
+.profile-pic {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  border: 4px solid #00bfff;
+  box-shadow: 0 0 20px #00bfff;
+  margin: 0; /* remove any margin */
+}
+
+.button {
+  padding: 12px 24px;
+  background-color: transparent;
+  border: 2px solid #00bfff;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  margin-right: 10px;
+  transition: all 0.3s ease;
+  display: inline-block;
+  box-shadow: 0 0 5px #00bfff;
+}
+
+.button:hover {
+  background-color: #00bfff;
+  color: black;
+  box-shadow: 0 0 20px #00bfff;
+}
+
+.section-content {
+  padding: 40px;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.skill-box {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px 20px;
+  border-radius: 12px;
+  border: 1px solid #00bfff;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.05);
+  color: white;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #00bfff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00bfff;
+  transition: box-shadow 0.3s;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 25px #00bfff;
+}
+
+/* Fade in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-text p {
+    font-size: 1.2rem;
+  }
+
+  .profile-pic {
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
